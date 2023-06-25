@@ -146,7 +146,7 @@ nav ul li a:hover::after{
     animation-name: tab-contents;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: ease-out;
     display:block;
     
     /* content-visibility: hidden;
@@ -156,18 +156,22 @@ nav ul li a:hover::after{
 @keyframes tab-contents {
     from{
         /* display: none; */
-        font-size: 0px;
+        /* font-size: 0px; */
+        opacity: 0;
     }   
     to{
-        font-size: 20px;
+        /* font-size: 20px; */
+        opacity: 100%;
     } 
 }
 @keyframes tab-contents-heading {
     from{
         /* display: none; */
-        font-size: 0px;
+        /* font-size: 0px; */
+        opacity: 0;
     }   
     to{
-        font-size: 14px;
+        /* font-size: 14px; */
+        opacity: 100%;
     } 
 }
