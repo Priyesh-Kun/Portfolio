@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Agdasima&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6536a91552.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -20,16 +21,18 @@
         <div class="container">
             <nav>
                 <img src="images/logo.png" alt="Error" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <!-- <li><a href="#services">Services</a></li> -->
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="icons fa-regular fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="icons fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p>UI/UX Designer</p>
+                <p><i class="fa-solid fa-code"></i> Back End Developer</p>
                 <h1>Hi, I'm <span>Priyesh Mishra</span> <br>from India</h1>
             </div>
         </div>
@@ -45,34 +48,22 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi totam perspiciatis amet libero
-                        cum odit nostrum cupiditate commodi harum tenetur inventore ratione rem minima, quisquam, soluta
-                        sapiente. Earum, veniam ad.
+                    <p>I'm a Backend Web Developer. I had been working on projects focused on managing databases and handling servers. Check about my projects in the Portfolio section. 
                     </p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('Education')">Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="Skills">
                         <ul>
-                            <li><span>UI/UX</span><br>Deisgning Web/App Interfaces</li>
-                            <li><span>Web Development</span><br>Web App Development</li>
-                            <li><span>App Development</span><br>Building Android/iOS Apps</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="Experience">
-                        <ul>
-                            <li><span>2021 - Current</span><br>UI/UX Design Training at ET institute</li>
-                            <li><span>2019-2021</span><br>Team lead at Startup LLC.</li>
-                            <li><span>2017-2019</span><br>UI/UX Design Executive at Coin Digital Ltd.</li>
+                            <li><span>Backend Development</span><br>Node.js Basics, Django Basics, SQL</li>
+                            <li><span>Web Development</span><br>HTML,    CSS,     JS</li>
+                            <li><span>Programming Languages</span><br>Python, C++</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="Education">
                         <ul>
                             <li><span>2022 - Current</span><br>Mechanical Engineering at IIt Roorkee</li>
-                            <li><span>2019-2021</span><br>Team lead at Startup LLC.</li>
-                            
                         </ul>
                     </div>
                 </div>
@@ -80,22 +71,155 @@
         </div>
     </div>
 
-<script>
+    <!-- Services -->
 
-    var tablinks = document.getElementsByClassName("tab-links")
-    var tabcontents = document.getElementsByClassName("tab-contents")
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove('active-link')
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove('active-tab')
-        }
-        event.currentTarget.classList.add("active-link")
-        document.getElementById(tabname).classList.add("active-tab")
-    }
+    <!-- <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati veritatis quisquam blanditiis
+                        eius perferendis fuga animi ab earum, dolorem fugit quidem. Vero, sint laudantium natus
+                        accusantium rerum doloremque debitis numquam.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati veritatis quisquam blanditiis
+                        eius perferendis fuga animi ab earum, dolorem fugit quidem. Vero, sint laudantium natus
+                        accusantium rerum doloremque debitis numquam.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-android"></i>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati veritatis quisquam blanditiis
+                        eius perferendis fuga animi ab earum, dolorem fugit quidem. Vero, sint laudantium natus
+                        accusantium rerum doloremque debitis numquam.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
 
-</script>
+        </div>
+    </div> -->
+
+    <!-- Portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="">
+                    <div class="layer">
+                        <h3>To Do List</h3>
+                        <p>This is the app made by our team to enable students to decide their priorities and let them increase the productivity. This app includes daily tasks manager and it also enables them to create weeekly and monthly targets. But what makes our project unique is that we had enabled it to take the input for tasks through voice. We have also included a calculator. This also has a well developed <span>login system.</span></p>
+                        <a href="https://github.com/Priyesh-Kun/Syntax-Error-Plan-t"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <!-- <div class="work">
+                    <img src="images/work-2.png" alt="">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio iure, asperiores eaque sint id
+                            suscipit sed similique rerum assumenda mollitia reprehenderit earum perferendis ipsam a
+                            voluptatum voluptas ullam delectus dolor.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png" alt="">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio iure, asperiores eaque
+                            sint id suscipit sed similique rerum assumenda mollitia reprehenderit earum perferendis
+                            ipsam a voluptatum voluptas ullam delectus dolor.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div> -->
+            </div>
+            <!-- <a href="#" class="btn">See More</a> -->
+        </div>
+    </div>
+
+
+    <!-- Contact -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-envelope"></i> mishrapriyesh2004@gmail.com</p>
+                <p><i class="fa-sharp fa-solid fa-phone"></i>9140094782</p>
+                <div class="social-icons">
+                    <a href="http://linkedin.com/in/priyesh-mishra-216097260"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="http://instagram.com/priyesh_kun"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="images\my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Priyesh.<br> Made with <i class="fas fa-heart"></i> by Priyesh.</p>
+    </div>
+</div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove('active-link')
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove('active-tab')
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxEERrknjsJorEBS2UImSdb7EDODMBsn4EBc4p4H-qCRCTGP8xF3op3ZRcfC-dI-UrjrA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message Sent Successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
 </body>
 
 </html>
